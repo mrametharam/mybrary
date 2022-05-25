@@ -63,6 +63,35 @@ Push local commits to the remote repository.
 .\> git push -u origin main
 ```
 
+Switch to another branch.
+
+```
+.\> git checkout <branch-name>
+```
+
+Create a new branch and switch to it.
+
+```
+.\> git checkout -b <branch-name>
+```
+
+Delete a local branch.
+
+```
+.\> git branch -d <branch-name>
+```
+
+Delete a remote branch.
+
+```
+.\> git push origin --delete development
+```
+
+Disconnect the local branch from the remote branch.
+
+```
+.\> git branch --unset-upstream
+```
 
 ## References
 
