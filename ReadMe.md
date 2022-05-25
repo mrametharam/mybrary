@@ -57,10 +57,16 @@ Link the local repository to a remote repository.
 .\> git remote add origin <git-url>
 ```
 
-Push local commits to the remote repository.
+Push local branch to the remote repository.
 
 ```
 .\> git push -u origin main
+```
+
+Push local commits to the remote repository.
+
+```
+.\> git push
 ```
 
 Switch to another branch.
