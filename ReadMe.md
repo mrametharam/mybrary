@@ -11,6 +11,7 @@ This project is dependent on the following packages:
 - *express-ejs-layouts* - provides html layout support for express.
 - *mongoose* - easy integration to the *MongoDb* server.
 - *cross-env* - sets environment variables in the script that works across all environments.
+- *body-parser* - parse the form fields in the request's body as an object.
 
 To assist with the development of this project, the following *DEV* dependencies were also added.
 

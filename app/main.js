@@ -11,6 +11,7 @@ if (APP_ENV === "DEV") {
 //#region Load packages
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const bodyParser = require("body-parser");
 //#endregion
 
 //#region Determin the HTTP port to use
@@ -30,13 +31,16 @@ app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 
 app.use(expressLayouts);
-app.use(express.static(__dirname + "/publicX"));
+app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 //#endregion
 
 //#region Setup the routes
-const { mainRouter, mainRoute } = require("./routes/index-route");
+const { mainRouter, mainRoute } = require("./routers/index-router");
+const { authorRouter, authorRoute } = require("./routers/authors-router");
 
 app.use(mainRoute, mainRouter);
+app.use(authorRoute, authorRouter);
 //#endregion
 
 //#region Setup MongoDb connection
